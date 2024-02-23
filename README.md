@@ -31,3 +31,9 @@ Building upon the initial feature engineering efforts, the second part of the pr
 - Performance Reporting: A detailed performance report for the models is compiled using the kds library, offering a thorough comparison and understanding of each model's effectiveness.
 
 - Insight Generation: A dive into the feature importance of the LightGBM model, which emerged as the top performer, is conducted. This analysis uncovers the critical factors influencing customer churn, providing actionable insights for crafting targeted retention strategies.
+
+# Additional Note on the Dataset
+
+The initial dataset used in this project comprises a CSV file with 1,039,865 records. Due to its size, the dataset is not included directly in this repository. However, a general description of the dataset is provided below to offer insights into the data structure and content.
+
+
