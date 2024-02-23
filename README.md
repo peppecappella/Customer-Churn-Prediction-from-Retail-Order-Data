@@ -10,11 +10,11 @@ The first part of the project tackles the challenge of working with order data t
 
 **Key Steps:**
 
--Defining the Target Variable: The analysis begins by excluding customers with fewer than two purchases. A repurchase curve is calculated at the 87th percentile, establishing a cutoff of 90 days to identify churn by assessing the presence of purchases in subsequent 90-day segments.
+- Defining the Target Variable: The analysis begins by excluding customers with fewer than two purchases. A repurchase curve is calculated at the 87th percentile, establishing a cutoff of 90 days to identify churn by assessing the presence of purchases in subsequent 90-day segments.
 
--Data Segmentation and Feature Calculation: The dataset is divided into 90-day periods, with analysis conducted to determine if purchases were made in the next segment. This method assigns a churn variable, indicating customers as churned if they did not make a purchase in the following 90 days.
+- Data Segmentation and Feature Calculation: The dataset is divided into 90-day periods, with analysis conducted to determine if purchases were made in the next segment. This method assigns a churn variable, indicating customers as churned if they did not make a purchase in the following 90 days.
 
--Preparation for Modeling: Additional features are developed, outliers are removed, and a labeled dataset indicating churn status is created, setting the stage for predictive modeling.
+- Preparation for Modeling: Additional features are developed, outliers are removed, and a labeled dataset indicating churn status is created, setting the stage for predictive modeling.
 
 **Part II : Modeling and Evaluation**
 
