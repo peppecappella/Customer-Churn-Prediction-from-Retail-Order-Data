@@ -71,4 +71,38 @@ Below is a comparison of Lift of the models:
 
 <img width="740" alt="Schermata 2024-03-09 alle 12 34 45" src="https://github.com/peppecappella/customer-churn-prediction-project/assets/124899610/19aba156-f0aa-40b8-a7df-42fba809ff03">
 
-From the chart, we see multiple lines, each representing a model and its corresponding lift across the deciles compared to a random selection baseline, which has a lift of 1 (no lift).Each model demonstrates varying degrees of lift. All the models start well above a lift of 1, indicating that they are all providing a better prediction than random chance, especially in the top deciles. Lightgbm stands out as the most effective, followed by Xgboost, Catboost, and lastly, the Neural Network. These insights are valuable when choosing a model for targeting interventions to prevent churn
+From the chart, we see multiple lines, each representing a model and its corresponding lift across the deciles compared to a random selection baseline, which has a lift of 1 (no lift).Each model demonstrates varying degrees of lift. All the models start well above a lift of 1, indicating that they are all providing a better prediction than random chance, especially in the top deciles. Lightgbm stands out as the most effective, followed by Xgboost, Catboost, and lastly, the Neural Network. These insights are valuable when choosing a model for targeting interventions to prevent churn.
+
+### Features importance
+
+analysis of feature importance for the LightGBM model (the best performer) is performed, offering valuable insights into which attributes most significantly influence predictions. This process enables a deep understanding of the key drivers behind customer churn behavior, aiding in the development of targeted retention strategies.
+
+Below is a chart bar showing for each features the related importance:
+
+<img width="768" alt="Schermata 2024-03-09 alle 12 38 52" src="https://github.com/peppecappella/customer-churn-prediction-project/assets/124899610/e5b090aa-bb6b-48cb-81f5-44f1b07aa232">
+
+### Features Explainability 
+
+The project concludes with a section dedicated to feature explainability, a critical aspect of modern machine learning that ensures our models are transparent and their decisions understandable. By leveraging the SHAP (SHapley Additive exPlanations) framework, we have aimed to demystify the predictions made by our machine learning models. SHAP, grounded in cooperative game theory, assigns an importance value to each feature for a particular prediction, making it possible to understand the impact of each input variable on the model's output.
+
+Specifically, we utilized the shap.force_plot function to visually dissect the contributions of each feature to individual predictions. 
+For example, the command shap.force_plot(explainer.expected_value, shap_values[3,:], X_sampled.iloc[3,:]) was used to generate an interactive visualization illustrating how each feature of a sampled record influences the model’s prediction away from a baseline value.This baseline represents the prediction that would be made in the absence of any features. The SHAP values, derived for every feature, indicate whether the influence is positive or negative relative to this baseline, offering a detailed glimpse into the reasoning behind the model's predictions.
+
+Below are, for example, shown the values for two distinct customers:
+
+**Customer 1:**
+
+![first_customer](https://github.com/peppecappella/customer-churn-prediction-project/assets/124899610/16dc1446-688b-4dcf-962c-6d141b0ffff5)
+
+Customer 1 has a relatively low age and a high value of T which push the prediction towards a higher likelihood of churn. An important finding is that the presence of a value equal to 31 in the "favorite store" variable might suggest that this store is particularly problematic, and further analysis may be needed to determine if some stores have a higher concentration of customers who churn.
+
+**Customer 2:**
+
+<img width="955" alt="Schermata 2024-03-09 alle 18 45 55" src="https://github.com/peppecappella/customer-churn-prediction-project/assets/124899610/ffa73368-fa39-4353-b6ef-ca5dc89c4474">
+
+For Customer 2, the plot shows a different story. Despite a high value of T, an age of 65 years together with consent to privacy push the prediction towards a lower likelihood of churn.
+
+This level of granularity not only aids in the personalization of services and interventions but also in the identification of key factors that might influence customer behavior or outcomes. By visualizing the impact of each feature for different customers, we can uncover insights that would remain hidden in more aggregated forms of analysis, facilitating a deeper understanding of the diverse factors that drive the model's predictions.
+
+
+
