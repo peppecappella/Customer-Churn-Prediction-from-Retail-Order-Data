@@ -1,4 +1,5 @@
 # Customer Churn Prediction from Retail Order Data
+
 Author: Giuseppe Cappella
 
 This project showcases the complete process of creating a churn prediction model, starting from customer transaction data. 
@@ -6,8 +7,7 @@ It covers all stages, including preparing the data, engineering features, traini
 
 # Dataset description
 
-The initial dataset used in this project comprises a CSV file with 1,039,865 records, each record in the dataset represents an individual transaction.
-Due to its size, the dataset is not included directly in this repository. However, a general description of the dataset is provided below to offer insights into the data structure and content.
+The initial dataset utilized in this project consists of a CSV file containing 1,039,865 records, where each record represents a single transaction, collectively covering a full year of sales. Due to its size, the dataset is not included directly in this repository. However, a general description of the dataset is provided below to offer insights into the data structure and content.
 
 - order_id: Uniquely identifies the transaction; all products purchased or refunded in the same transaction share this ID.
 - customer_id: Identifies the customer, acting as a foreign key in the dataset.
@@ -34,7 +34,7 @@ The first part of the project tackles the challenge of working with order data t
 
 **- Preparation for Modeling:** Additional features are developed, outliers are removed, and a labeled dataset indicating churn status is created, setting the stage for predictive modeling.
 
-## Part II : Modeling and Evaluation**
+## Part II : Modeling and Evaluation
 
 Building upon the initial feature engineering efforts, the second part of the project focuses on the modeling, evaluation, and comparison of various machine learning models.
 
