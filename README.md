@@ -1,7 +1,8 @@
 # Customer Churn Prediction from Retail Order Data
 Author: Giuseppe Cappella
 
-This project exemplifies the end-to-end process of developing a churn prediction model starting from transaction data, from data preparation and feature engineering to model training, evaluation, and insight generation.
+This project showcases the complete process of creating a churn prediction model, starting from customer transaction data. 
+It covers all stages, including preparing the data, engineering features, training the model, evaluating its performance, and generating insights.
 
 # Dataset description
 
